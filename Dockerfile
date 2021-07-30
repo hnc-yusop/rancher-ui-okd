@@ -10,4 +10,4 @@ RUN apt-get install -y nodejs
 RUN yarn install && yarn cache clean
 COPY . /source
 ENTRYPOINT ["yarn"]
-CMD ["start","--ssl=false"]
+CMD ["start","--ssl=true"]
