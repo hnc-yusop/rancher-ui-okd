@@ -1,10 +1,8 @@
 stages:
 - name: build
   steps:
-  - publishImageConfig:
-      dockerfilePath: ./Dockerfile
-      buildContext: .
-      tag: ui/ui:v1
-      registry: 127.0.0.1:34129
+  - runScriptConfig:
+      image: node:latest
+      shellScript: ./scripts/update-dependencies
 timeout: 60
 notification: {}
