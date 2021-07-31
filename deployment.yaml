@@ -1,0 +1,35 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: rancher-ui-service
+spec:
+  selector:
+    app: rancher-ui
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rancher-ui
+  labels:
+    app: rancher-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rancher-ui
+  template:
+    metadata:
+      labels:
+        app: rancher-ui
+    spec:
+      imagePullSecrets:
+      - name: pipeline-docker-registry
+      containers:
+      - name: rancher-ui
+        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+        ports:
+        - containerPort: 8000
