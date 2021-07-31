@@ -16,7 +16,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: rancher-ui/rancher-ui:v1
+      tag: rancher-ui:${CICD_EXECUTION_SEQUENCE}
       registry: 127.0.0.1:34737
 - name: deploy
   steps:
