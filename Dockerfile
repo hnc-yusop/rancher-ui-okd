@@ -8,6 +8,8 @@ RUN npm install --global yarn
 
 RUN yarn install && yarn cache clean
 
+RUN scripts/update-dependencies
+
 COPY ssl /rancher-ui/ssl
 
 COPY rancher-ui.conf /etc/nginx/conf.d
