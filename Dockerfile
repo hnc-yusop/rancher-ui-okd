@@ -18,7 +18,7 @@ RUN scripts/update-dependencies
 
 RUN scripts/build-static -s -l -c 'your-server.com'
 
-RUN ls
+RUN ls dist
 
 COPY . /source
 
