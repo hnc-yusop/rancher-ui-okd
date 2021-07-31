@@ -18,14 +18,10 @@ RUN scripts/update-dependencies
 
 RUN scripts/build-static -s -l -c 'your-server.com'
 
-RUN ls dist
-
-RUN sleep 50000
-
 COPY . /source
 
 COPY ssl /rancher-ui/ssl
 
 COPY rancher-ui.conf /etc/nginx/conf.d
 
-COPY dist/static /rancher-ui/www
+COPY /source/dist/static /rancher-ui/www
