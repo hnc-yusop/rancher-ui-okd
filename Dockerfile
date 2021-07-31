@@ -16,9 +16,11 @@ RUN yarn install && yarn cache clean
 
 RUN scripts/update-dependencies
 
-COPY . /source
-
 RUN scripts/build-static -s -l -c 'your-server.com'
+
+RUN ls
+
+COPY . /source
 
 COPY ssl /rancher-ui/ssl
 
