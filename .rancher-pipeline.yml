@@ -11,5 +11,10 @@ stages:
         yarn install && yarn cache clean
         ./scripts/update-dependencies
         ./scripts/build-static -s -l -c 'your-server.com'
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: rancher-ui/rancher-ui:latest
+      registry: 127.0.0.1:34737
 timeout: 60
 notification: {}
