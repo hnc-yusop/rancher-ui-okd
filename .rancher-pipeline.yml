@@ -2,7 +2,7 @@ stages:
 - name: build
   steps:
   - runScriptConfig:
-      image: node:latest
+      image: gcc:latest
       shellScript: |-
         curl -sL https://deb.nodesource.com/setup_12.x | bash -
         apt-get update
