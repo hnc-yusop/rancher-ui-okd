@@ -5,6 +5,8 @@ stages:
       image: node:latest
       shellScript: |-
         curl -sL https://deb.nodesource.com/setup_12.x | bash -
+        apt-get install -y nodejs git
         npm install --global yarn
+        yarn install && yarn cache clean
 timeout: 60
 notification: {}
