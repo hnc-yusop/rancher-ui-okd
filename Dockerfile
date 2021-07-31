@@ -1,5 +1,7 @@
 FROM nginx:latest
 
+RUN npm install --global yarn
+
 RUN yarn install && yarn cache clean
 
 COPY ssl /rancher-ui/ssl
