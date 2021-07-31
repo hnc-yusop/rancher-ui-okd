@@ -1,6 +1,8 @@
 FROM nginx:latest
 
-COPY . .
+WORKDIR /source
+
+COPY . /source
 
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 
