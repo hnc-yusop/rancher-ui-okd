@@ -10,5 +10,6 @@ stages:
         npm install --global yarn
         yarn install && yarn cache clean
         ./scripts/update-dependencies
+        ./scripts/build-static -s -l -c 'your-server.com'
 timeout: 60
 notification: {}
