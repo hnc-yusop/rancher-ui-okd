@@ -1,6 +1,6 @@
 FROM nginx:latest
 
-COPY scripts ./scripts
+COPY . .
 
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 
