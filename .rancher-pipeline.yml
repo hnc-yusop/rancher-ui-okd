@@ -1,10 +1,9 @@
 stages:
 - name: build
   steps:
-  - publishImageConfig:
-      dockerfilePath: ./Dockerfile
-      buildContext: .
-      tag: rancher-ui/rancher-ui:v1
-      registry: 127.0.0.1:34737
+  - runScriptConfig:
+      image: node:latest
+      shellScript: |
+        curl -sL https://deb.nodesource.com/setup_12.x | bash -
 timeout: 60
 notification: {}
