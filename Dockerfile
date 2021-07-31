@@ -14,6 +14,8 @@ RUN yarn install && yarn cache clean
 
 RUN scripts/update-dependencies
 
+RUN scripts/build-static -l -c 'your-server.com'
+
 COPY ssl /rancher-ui/ssl
 
 COPY rancher-ui.conf /etc/nginx/conf.d
