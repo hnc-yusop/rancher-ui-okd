@@ -10,7 +10,7 @@ stages:
         npm install --global yarn
         yarn install && yarn cache clean
         ./scripts/update-dependencies
-        ./scripts/build-static -s -l -c 'a7a3f795df7a14107a4f9d67b13ab07b-989811488.ap-northeast-2.elb.amazonaws.com'
+        ./scripts/build-static -s -l -v'rancher-ui' -c 'a7a3f795df7a14107a4f9d67b13ab07b-989811488.ap-northeast-2.elb.amazonaws.com:8000'
 - name: docker build
   steps:
   - publishImageConfig:
