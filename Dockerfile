@@ -16,7 +16,7 @@ RUN npm install --global yarn
 RUN yarn install && yarn cache clean
 RUN ./scripts/update-dependencies
 RUN git checkout Dockerfile
-RUN ./scripts/build-static -s -l -v'rancher-ui' -c 'af0d5015fb27e42bd89310d1c1d361bb-1043022258.ap-northeast-2.elb.amazonaws.com:8000'
+RUN ./scripts/build-static -s -l -v'rancher-ui' -c 'rancher-ui-okd-git-prj-yusop-hancom-com.apps.okd.mt.hcabp.hancom.com:8000'
 
 FROM nginx:1.17
 COPY nginx.conf /etc/nginx/nginx.conf
