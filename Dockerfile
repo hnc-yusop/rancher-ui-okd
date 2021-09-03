@@ -21,7 +21,6 @@ RUN ./scripts/build-static -s -l -v'rancher-ui' -c 'af0d5015fb27e42bd89310d1c1d3
 FROM nginx:1.17
 COPY nginx.conf /etc/nginx/nginx.conf
 WORKDIR /code
-COPY --from=BUILD /dist/static .
+COPY --from=BUILD /usr/src/app/dist/static .
 EXPOSE 8000:8000
 CMD ["nginx", "-g", "daemon off;"]
-
