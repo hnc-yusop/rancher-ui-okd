@@ -15,6 +15,7 @@ RUN apt-get install -y nodejs git
 RUN npm install --global yarn
 RUN yarn install && yarn cache clean
 RUN ./scripts/update-dependencies
+RUN git checkout Dockerfile
 RUN ./scripts/build-static -s -l -v'rancher-ui' -c 'af0d5015fb27e42bd89310d1c1d361bb-1043022258.ap-northeast-2.elb.amazonaws.com:8000'
 
 FROM nginx:1.17
