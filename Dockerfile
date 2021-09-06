@@ -21,7 +21,7 @@ RUN ./scripts/build-static -s -l -v'rancher-ui' -c 'rancher-ui-okd-git-prj-yusop
 FROM nginx:1.17
 COPY nginx.conf /etc/nginx/nginx.conf
 WORKDIR /code
-COPY --from=BUILD /usr/src/app/dist/static/rancher-ui .
+COPY --from=BUILD /usr/src/app/dist/static/ www/
 COPY --from=BUILD /usr/src/app/ssl ssl
 EXPOSE 8080:8080
 CMD ["nginx", "-g", "daemon off;"]
