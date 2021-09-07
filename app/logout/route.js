@@ -5,7 +5,7 @@ export default Route.extend({
   access: service(),
 
   beforeModel(transition) {
-    window.location.href='https://orca-keycloak.cloud.hancom.com/auth/realms/hancom_realm/protocol/openid-connect/logout?redirect_uri=https://orca-rancher.cloud.hancom.com/dashboard/logout';
+    window.location.href='https://localhost/a_logout.html';
 
     //transition.send('logout');
   }

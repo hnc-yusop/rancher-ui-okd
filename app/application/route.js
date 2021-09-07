@@ -143,7 +143,7 @@ export default Route.extend({
 
     logout(transition, errorMsg) {
 
-      window.location.href='https://orca-keycloak.cloud.hancom.com/auth/realms/hancom_realm/protocol/openid-connect/logout?redirect_uri=https://a317e09c1895e4c409a6031db3f71372-1861319992.ap-northeast-2.elb.amazonaws.com/dashboard/logout';
+      window.location.href='https://localhost/b_logout.html';
 	    /*
       let session = get(this, 'session');
       let access = get(this, 'access');
