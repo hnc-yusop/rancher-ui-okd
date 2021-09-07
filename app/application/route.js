@@ -167,8 +167,8 @@ export default Route.extend({
           url = `${ url }?errorMsg=${ errorMsg }`;
         }
 
-        window.location.replace(url);
-        window.location.href='https://orca-keycloak.cloud.hancom.com/auth/realms/hancom_realm/protocol/openid-connect/logout?redirect_uri=url';
+        //window.location.replace(url);
+        window.location.href='https://orca-keycloak.cloud.hancom.com/auth/realms/hancom_realm/protocol/openid-connect/logout?redirect_uri='+url;
       });
     },
 
