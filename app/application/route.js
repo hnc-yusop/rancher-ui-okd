@@ -143,8 +143,6 @@ export default Route.extend({
 
     logout(transition, errorMsg) {
 
-      window.location.href='https://localhost/b_logout.html';
-	    /*
       let session = get(this, 'session');
       let access = get(this, 'access');
 
@@ -171,8 +169,6 @@ export default Route.extend({
 
         window.location.replace(url);
       });
-
-      */
     },
 
 
