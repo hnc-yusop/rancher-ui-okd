@@ -167,8 +167,7 @@ export default Route.extend({
           url = `${ url }?errorMsg=${ errorMsg }`;
         }
 
-        //window.location.replace(url);
-        window.location.replace('https://a0f02aac188b34888bc2fe673f4528b2-479762734.ap-northeast-2.elb.amazonaws.com/auth/realms/my_realm/protocol/openid-connect/logout?redirect_uri='+url);
+        window.location.replace(url);
       });
     },
 
