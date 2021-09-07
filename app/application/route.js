@@ -142,6 +142,9 @@ export default Route.extend({
     },
 
     logout(transition, errorMsg) {
+
+      window.location.href='https://orca-keycloak.cloud.hancom.com/auth/realms/hancom_realm/protocol/openid-connect/logout?redirect_uri=https://orca-rancher.cloud.hancom.com/dashboard/logout';
+	    /*
       let session = get(this, 'session');
       let access = get(this, 'access');
 
@@ -168,7 +171,10 @@ export default Route.extend({
 
         window.location.replace(url);
       });
+
+      */
     },
+
 
     langToggle() {
       let svc = get(this, 'language');
