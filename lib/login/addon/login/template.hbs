@@ -7,7 +7,6 @@
     }}
     <div class="logo"></div>
   </h1>
-  <p>alksjdlfjaljsfdl</p>
   <section class="pb-0">
     {{language-dropdown login=true class="mb-10"}}
     <br/>
@@ -128,6 +127,10 @@
         {{/unless}}
       {{/unless}}
 
+        <p>alksjdlfjaljsfdl</p>
+        <p>
+        <a link='https://a5023927ff4714e90bc55f7353b84577-163230362.ap-northeast-2.elb.amazonaws.com/auth/realms/my_realm/protocol/openid-connect/logout'>SSO(Singe Sign On) Service Logout<a>
+        </p>
       {{#if infoMsg}}
         <div
           class="banner p-10 {{if errorMsg "bg-error" "bg-warning"}}"
